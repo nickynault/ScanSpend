@@ -1,0 +1,59 @@
+🧾 Project Name (Placeholder): ScanSpend
+🗺️ Phase 1: MVP Scope
+✅ Features:
+Upload Receipt Image (JPEG/PNG/PDF)
+
+Extract Text using OCR (Tesseract or AWS Textract)
+
+Parse Extracted Text into Items, Prices, Totals
+
+Auto-Categorize Items (e.g., Food, Transport, etc.)
+
+Store Receipt Data in Firebase or SQLite
+
+Display Expense Summary with Filtering/Charts
+
+🔧 Tech Stack:
+Feature	Tech
+Frontend UI	React (Vite or CRA)
+OCR	Python (Tesseract) or AWS Textract
+Backend API (OCR + Parser)	Flask or FastAPI
+Database	Firebase Firestore OR SQLite
+Auth (optional)	Firebase Auth (if multi-user)
+Charts	Chart.js or Recharts (React)
+Hosting	Vercel (frontend) + Render/Heroku (backend)
+
+🧪 Phase 1 Dev Plan
+Here’s how we can break it down to make consistent progress:
+
+[Today] Project Setup
+
+Frontend: Create a React app + UI for image upload
+
+Backend: Create basic Flask/FastAPI server (can run locally)
+
+Hook up the two with an API call
+
+[Next] OCR Functionality
+
+Integrate Tesseract to extract text from uploaded image
+
+Return raw OCR result to frontend
+
+Receipt Parsing
+
+Use regex and line structure to pull items, prices, subtotal/total
+
+Format and display as a table on the frontend
+
+Categorization
+
+Use simple keyword matching first (e.g., “milk” → grocery)
+
+Upgrade to OpenAI classifier or custom ML model later
+
+Data Storage + History View
+
+Add Firebase or SQLite to persist receipts
+
+Display past receipts and chart expenses over time
