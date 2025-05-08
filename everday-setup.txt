@@ -1,0 +1,31 @@
+✅ VSCode Setup Instructions for ScanSpend
+Open VSCode to the ScanSpend/ folder
+
+Ensure correct Git branch and pull latest
+
+git status      # see what branch you're on
+git checkout main or BigBoss
+git pull origin main or BigBoss
+
+Activate the virtual environment
+# Windows
+.\venv\Scripts\activate
+
+Install any missing dependencies (only if needed)
+pip install -r requirements.txt
+Run the FastAPI backend locally
+
+uvicorn main:app --reload
+# or if your app is inside /app folder
+uvicorn app.main:app --reload
+
+Open browser to: http://127.0.0.1:8000
+(Optional) Run with auto-reload if editing backend code
+
+✅ Bonus Tips
+If uvicorn is not recognized, re-activate the venv and make sure it was installed.
+
+Make sure your interpreter in VSCode is set to:
+venv\Scripts\python.exe
+
+Don’t commit the venv/ folder or .env files — they’re ignored via .gitignore.
